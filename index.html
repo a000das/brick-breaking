@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brick Breaker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- START SCREEN -->
+<div id="startScreen">
+    <h1>BRICK BREAKER</h1>
+    <button id="startBtn">START GAME</button>
+</div>
+
+<div class="game-wrapper hidden" id="gameUI">
+
+    <div class="side-panel">
+        <div class="stat">
+            <span class="label">LEVEL</span>
+            <span id="stars">★ ☆ ☆</span>
+        </div>
+        <div class="stat">
+            <span class="label">SCORE</span>
+            <span id="score">0</span>
+        </div>
+        <div class="stat">
+            <span class="label">LIVES</span>
+            <span id="lives">❤️ ❤️ ❤️</span>
+        </div>
+        <div class="stat">
+            <span class="label">TIME</span>
+            <span id="time">0.0 s</span>
+        </div>
+        <button id="pauseBtn">⏸ Pause</button>
+    </div>
+
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="gameOver">
+            <div class="gameover-content">
+                <div class="gameover-title">GAME OVER!!</div>
+                <button id="restartBtn">🔄 Play Again</button>
+            </div>
+        </div>
+
+        <!-- Mobile on-screen controls (shown only on touch devices) -->
+        <div id="mobileControls">
+            <button id="leftBtn" aria-label="Move Left">◀</button>
+            <button id="rightBtn" aria-label="Move Right">▶</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
